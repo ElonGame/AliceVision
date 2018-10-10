@@ -182,12 +182,11 @@ if(ALICEVISION_BUILD_SFM)
   endif()
 
   # Prepare dense scene for MVS
-  alicevision_add_software(aliceVision_prepareDenseScene
-    SOURCE main_prepareDenseScene.cpp
+  alicevision_add_software(aliceVision_undistortImages
+    SOURCE main_undistortImages.cpp
     FOLDER ${FOLDER_SOFTWARE_PIPELINE}
     LINKS aliceVision_system
           aliceVision_image
-          aliceVision_feature
           aliceVision_sfmData
           aliceVision_sfmDataIO
           ${Boost_LIBRARIES}
